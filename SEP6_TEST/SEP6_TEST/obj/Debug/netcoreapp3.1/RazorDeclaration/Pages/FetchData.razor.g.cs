@@ -89,6 +89,20 @@ using SEP6_TEST.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+using SEP6_TEST.ApiAccess;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+using SEP6_TEST.ApiModels;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
     public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,10 +112,13 @@ using SEP6_TEST.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 41 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 56 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
        
     private WeatherForecast[] forecasts;
     private string stringFromDb = "";
+
+    private MovieBaseInfo MovieBaseInfo = new MovieBaseInfo();
+    private Ratings ratings = new Ratings();
 
     protected override async Task OnInitializedAsync()
     {
@@ -109,14 +126,24 @@ using SEP6_TEST.Models;
 
         using (var context = new SqlServerSep6Context())
         {
-            stringFromDb = context.StartTables.Select(p => p.StartColum).FirstOrDefault().ToString();
+            //stringFromDb = context.Movies.Where(p => p.Id == 15414).Select(p => p.Title).FirstOrDefault().ToString();
+            // we are storing only the movies in the db
+            //the other things we will get from imdb api
+
+            await movieApi.GetMovieBaseInfoAsync("tt0944947");
+            MovieBaseInfo = movieApi.movieBaseInfo;
+
+            await movieApi.GetMovieRatingsAsync("tt0944947");
+            ratings = movieApi.ratings;
         }
+
 
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IMovieAccessInfoApi movieApi { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
     }
 }

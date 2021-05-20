@@ -17,7 +17,7 @@ namespace SEP6_TEST.Models
         {
         }
 
-        public virtual DbSet<StartTable> StartTables { get; set; }
+        public virtual DbSet<Movie> Movies { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,15 +31,20 @@ namespace SEP6_TEST.Models
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
-            modelBuilder.Entity<StartTable>(entity =>
+            modelBuilder.Entity<Movie>(entity =>
             {
                 entity.HasNoKey();
 
-                entity.ToTable("StartTable");
+                entity.ToTable("movies");
 
-                entity.Property(e => e.StartColum)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Title)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("title");
+
+                entity.Property(e => e.Year).HasColumnName("year");
             });
 
             OnModelCreatingPartial(modelBuilder);

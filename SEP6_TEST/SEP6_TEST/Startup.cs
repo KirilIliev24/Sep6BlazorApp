@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SEP6_TEST.ApiAccess;
 using SEP6_TEST.Data;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,8 @@ namespace SEP6_TEST
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddScoped<IMovieAccessInfoApi, MovieInfoApi>(); //- scope is like Singleton, but for a specific client
+            services.AddHttpClient();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,7 +2,10 @@
 
 @using SEP6_TEST.Data
 @using SEP6_TEST.Models
+@using SEP6_TEST.ApiAccess
+@using SEP6_TEST.ApiModels
 @inject WeatherForecastService ForecastService
+@inject IMovieAccessInfoApi movieApi
 
 <h1>Weather forecast</h1>
 
@@ -35,12 +38,27 @@ else
             }
         </tbody>
     </table>
-    <p>@stringFromDb</p>
+    @*@if (!MovieBaseInfo.image.url.Equals(null))
+    {
+        <img src=@MovieBaseInfo.image.url alt="MovieImage">
+        <p>@MovieBaseInfo.titleType</p>
+    }*@
+    <p>Rating: @ratings.rating</p>
+    <p>Rating count: @ratings.ratingCount</p>
+    @foreach (var r in ratings.otherRanks)
+    {
+        <p>Label: @r.label</p>
+        <p>Rank: @r.rank</p>
+    }
+
 }
 
 @code {
     private WeatherForecast[] forecasts;
     private string stringFromDb = "";
+
+    private MovieBaseInfo MovieBaseInfo = new MovieBaseInfo();
+    private Ratings ratings = new Ratings();
 
     protected override async Task OnInitializedAsync()
     {
@@ -48,8 +66,17 @@ else
 
         using (var context = new SqlServerSep6Context())
         {
-            stringFromDb = context.StartTables.Select(p => p.StartColum).FirstOrDefault().ToString();
+            //stringFromDb = context.Movies.Where(p => p.Id == 15414).Select(p => p.Title).FirstOrDefault().ToString();
+            // we are storing only the movies in the db
+            //the other things we will get from imdb api
+
+            await movieApi.GetMovieBaseInfoAsync("tt0944947");
+            MovieBaseInfo = movieApi.movieBaseInfo;
+
+            await movieApi.GetMovieRatingsAsync("tt0944947");
+            ratings = movieApi.ratings;
         }
+
 
     }
 }
