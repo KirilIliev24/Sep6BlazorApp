@@ -9,8 +9,6 @@ namespace SEP6_TEST.ApiAccess
     interface IMovieAccessInfoApi
     {
         public MovieBaseInfo movieBaseInfo { get; }
-        public Ratings ratings { get; }
         public Task GetMovieBaseInfoAsync(string movieId);
-        public Task GetMovieRatingsAsync(string movieId);
     }
 }

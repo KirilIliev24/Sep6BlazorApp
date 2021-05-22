@@ -18,6 +18,7 @@ namespace SEP6_TEST.Models
         }
 
         public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<Rating> Ratings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,11 +34,11 @@ namespace SEP6_TEST.Models
 
             modelBuilder.Entity<Movie>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("movies");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
 
                 entity.Property(e => e.Title)
                     .IsRequired()
@@ -45,6 +46,19 @@ namespace SEP6_TEST.Models
                     .HasColumnName("title");
 
                 entity.Property(e => e.Year).HasColumnName("year");
+            });
+
+            modelBuilder.Entity<Rating>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("ratings");
+
+                entity.Property(e => e.MovieId).HasColumnName("movie_id");
+
+                entity.Property(e => e.Rating1).HasColumnName("rating");
+
+                entity.Property(e => e.Votes).HasColumnName("votes");
             });
 
             OnModelCreatingPartial(modelBuilder);

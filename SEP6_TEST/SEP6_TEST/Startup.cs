@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SEP6_TEST.ApiAccess;
 using SEP6_TEST.Data;
+using SEP6_TEST.DbAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,8 +30,8 @@ namespace SEP6_TEST
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddScoped<IMovieAccessInfoApi, MovieInfoApi>(); //- scope is like Singleton, but for a specific client
+            services.AddScoped<IMovieInfoDb, MovieInfoDb>();
             services.AddHttpClient();
         }
 

@@ -1,82 +1,62 @@
 ﻿@page "/fetchdata"
 
-@using SEP6_TEST.Data
 @using SEP6_TEST.Models
 @using SEP6_TEST.ApiAccess
 @using SEP6_TEST.ApiModels
-@inject WeatherForecastService ForecastService
+@using SEP6_TEST.DbAccess
+
 @inject IMovieAccessInfoApi movieApi
+@inject IMovieInfoDb moviesDb
 
 <h1>Weather forecast</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
+    @if(Loading == true)
+    {
+        <p>Loading...</p>
+    }
+    else 
+    {
+        
+    <table>
+        @foreach (var movie in Movies)
+        {
+        <tr>
+            <td>
+                @movie.Title
+            </td>
+            <td>
+                @movie.Year
+            </td>
+            <td>
+                @movie.rating.Rating1
+            </td>
+            <td>
+                @movie.rating.Votes
+            </td>
+        </tr>
+        }
+
     </table>
-    @*@if (!MovieBaseInfo.image.url.Equals(null))
-    {
-        <img src=@MovieBaseInfo.image.url alt="MovieImage">
-        <p>@MovieBaseInfo.titleType</p>
-    }*@
-    <p>Rating: @ratings.rating</p>
-    <p>Rating count: @ratings.ratingCount</p>
-    @foreach (var r in ratings.otherRanks)
-    {
-        <p>Label: @r.label</p>
-        <p>Rank: @r.rank</p>
+        //component that takes a MovieBaseInfo as a parameter
     }
 
-}
-
 @code {
-    private WeatherForecast[] forecasts;
-    private string stringFromDb = "";
+    private List<Movie> Movies = new List<Movie>();
 
-    private MovieBaseInfo MovieBaseInfo = new MovieBaseInfo();
-    private Ratings ratings = new Ratings();
+    private List<MovieBaseInfo> MoviesBaseInfo = new List<MovieBaseInfo>();
+
+    private bool Loading = false;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        Loading = true;
+        await moviesDb.GetAllMovies();
+        Movies = moviesDb.Movies;
 
-        using (var context = new SqlServerSep6Context())
-        {
-            //stringFromDb = context.Movies.Where(p => p.Id == 15414).Select(p => p.Title).FirstOrDefault().ToString();
-            // we are storing only the movies in the db
-            //the other things we will get from imdb api
+        //should get the base info for every movie, add all async methods to a list and run them async
 
-            await movieApi.GetMovieBaseInfoAsync("tt0944947");
-            MovieBaseInfo = movieApi.movieBaseInfo;
-
-            await movieApi.GetMovieRatingsAsync("tt0944947");
-            ratings = movieApi.ratings;
-        }
-
-
+        Loading = false;
     }
 }

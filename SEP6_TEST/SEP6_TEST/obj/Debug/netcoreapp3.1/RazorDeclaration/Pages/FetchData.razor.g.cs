@@ -77,28 +77,28 @@ using SEP6_TEST.Shared;
 #nullable disable
 #nullable restore
 #line 3 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
-using SEP6_TEST.Data;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
 using SEP6_TEST.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 4 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
 using SEP6_TEST.ApiAccess;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 5 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
 using SEP6_TEST.ApiModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+using SEP6_TEST.DbAccess;
 
 #line default
 #line hidden
@@ -112,39 +112,30 @@ using SEP6_TEST.ApiModels;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 56 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 45 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
        
-    private WeatherForecast[] forecasts;
-    private string stringFromDb = "";
+    private List<Movie> Movies = new List<Movie>();
 
-    private MovieBaseInfo MovieBaseInfo = new MovieBaseInfo();
-    private Ratings ratings = new Ratings();
+    private List<MovieBaseInfo> MoviesBaseInfo = new List<MovieBaseInfo>();
+
+    private bool Loading = false;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        Loading = true;
+        await moviesDb.GetAllMovies();
+        Movies = moviesDb.Movies;
 
-        using (var context = new SqlServerSep6Context())
-        {
-            //stringFromDb = context.Movies.Where(p => p.Id == 15414).Select(p => p.Title).FirstOrDefault().ToString();
-            // we are storing only the movies in the db
-            //the other things we will get from imdb api
+        //should get the base info for every movie, add all async methods to a list and run them async
 
-            await movieApi.GetMovieBaseInfoAsync("tt0944947");
-            MovieBaseInfo = movieApi.movieBaseInfo;
-
-            await movieApi.GetMovieRatingsAsync("tt0944947");
-            ratings = movieApi.ratings;
-        }
-
-
+        Loading = false;
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IMovieInfoDb moviesDb { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IMovieAccessInfoApi movieApi { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
     }
 }
 #pragma warning restore 1591
