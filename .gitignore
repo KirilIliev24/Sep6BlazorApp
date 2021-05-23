@@ -361,3 +361,24 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+SEP6_TEST/.vs/SEP6_TEST/DesignTimeBuild/.dtbcache.v2
+*.cache
+SEP6_TEST/.vs/SEP6_TEST/v16/.suo
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs
+*.cache
+SEP6_TEST/SEP6_TEST/obj/SEP6_TEST.csproj.nuget.g.props
+SEP6_TEST/SEP6_TEST/obj/SEP6_TEST.csproj.nuget.dgspec.json
+SEP6_TEST/SEP6_TEST/obj/project.nuget.cache
+SEP6_TEST/SEP6_TEST/obj/project.assets.json
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/SEP6_TEST.csprojAssemblyReference.cache
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/SEP6_TEST.assets.cache
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/NavMenu.razor.g.cs
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/FetchData.razor.g.cs
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Counter.razor.g.cs
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs
+SEP6_TEST/SEP6_TEST/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs
+SEP6_TEST/.vs/SEP6_TEST/v16/.suo
+SEP6_TEST/.vs/SEP6_TEST/DesignTimeBuild/.dtbcache.v2
