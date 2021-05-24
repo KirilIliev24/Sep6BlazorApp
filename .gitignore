@@ -361,3 +361,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+SEP6_TEST/SEP6_TEST/obj/project.assets.json
+SEP6_TEST/SEP6_TEST/obj/project.nuget.cache
+SEP6_TEST/SEP6_TEST/obj/SEP6_TEST.csproj.nuget.dgspec.json
+SEP6_TEST/SEP6_TEST/obj/SEP6_TEST.csproj.nuget.g.props
+*.cache
+*.props
+*.json
+*.json
+SEP6_TEST/SEP6_TEST/obj/SEP6_TEST.csproj.nuget.dgspec.json
+SEP6_TEST/SEP6_TEST/obj/project.nuget.cache
