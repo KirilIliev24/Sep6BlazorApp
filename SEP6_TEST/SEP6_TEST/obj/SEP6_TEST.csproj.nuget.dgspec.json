@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Harry\\OneDrive\\Documents\\SEP06\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj": {}
   },
   "projects": {
@@ -13,29 +12,9 @@
         "projectPath": "C:\\Users\\Harry\\OneDrive\\Documents\\SEP06\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj",
         "packagesPath": "C:\\Users\\Harry\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Harry\\OneDrive\\Documents\\SEP06\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\obj\\",
-=======
-    "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj": {}
-  },
-  "projects": {
-    "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj",
-        "projectName": "SEP6_TEST",
-        "projectPath": "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj",
-        "packagesPath": "C:\\Users\\mmikl\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\obj\\",
->>>>>>> parent of 4418754 (Revert "UI updates")
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\Harry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\mmikl\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> parent of 4418754 (Revert "UI updates")
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,11 +83,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> parent of 4418754 (Revert "UI updates")
         }
       }
     }
