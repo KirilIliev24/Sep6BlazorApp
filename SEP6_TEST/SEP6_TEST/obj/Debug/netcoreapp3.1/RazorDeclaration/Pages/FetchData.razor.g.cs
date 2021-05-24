@@ -13,98 +13,98 @@ namespace SEP6_TEST.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 1 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 2 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 3 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 4 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 5 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 6 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 7 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 8 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using SEP6_TEST;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\_Imports.razor"
+#line 9 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\_Imports.razor"
 using SEP6_TEST.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 3 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
 using SEP6_TEST.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 4 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
 using SEP6_TEST.ApiAccess;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 5 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
 using SEP6_TEST.ApiModels;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 6 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
 using SEP6_TEST.DbAccess;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 7 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
 using SEP6_TEST.Components;
 
 #line default
@@ -119,7 +119,7 @@ using SEP6_TEST.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 33 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
        
     private List<Movie> Movies = new List<Movie>();
 
