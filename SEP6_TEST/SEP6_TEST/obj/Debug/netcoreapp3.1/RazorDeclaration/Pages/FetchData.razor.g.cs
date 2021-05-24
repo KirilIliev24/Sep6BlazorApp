@@ -103,6 +103,13 @@ using SEP6_TEST.DbAccess;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 7 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+using SEP6_TEST.Components;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
     public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,7 +119,7 @@ using SEP6_TEST.DbAccess;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
+#line 33 "D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\Pages\FetchData.razor"
        
     private List<Movie> Movies = new List<Movie>();
 
@@ -123,13 +130,15 @@ using SEP6_TEST.DbAccess;
     protected override async Task OnInitializedAsync()
     {
         Loading = true;
-        await moviesDb.GetAllMovies();
+        //await moviesDb.GetAllMovies();
         Movies = moviesDb.Movies;
 
         //should get the base info for every movie, add all async methods to a list and run them async
 
         Loading = false;
     }
+
+    Movie movie = new Movie { Id = 1, rating = new Rating { MovieId = 1, Rating1 = 6.6, Votes = 245}, Title = "Fat & Furious 6", Year = 2025 };
 
 #line default
 #line hidden

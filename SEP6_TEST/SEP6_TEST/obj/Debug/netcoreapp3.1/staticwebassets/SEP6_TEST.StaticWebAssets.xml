@@ -1,1 +1,3 @@
-﻿<StaticWebAssets Version="1.0" />
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\scopedcss\bundle\" />
+</StaticWebAssets>
