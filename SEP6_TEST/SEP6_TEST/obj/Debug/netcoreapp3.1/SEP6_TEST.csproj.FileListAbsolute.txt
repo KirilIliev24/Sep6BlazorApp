@@ -51,7 +51,6 @@ D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\bin\Debug\netcoreapp3.1\ru
 D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\SEP6_TEST.csprojAssemblyReference.cache
 D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\SEP6_TEST.AssemblyInfoInputs.cache
 D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\SEP6_TEST.AssemblyInfo.cs
 D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\SEP6_TEST.csproj.CoreCompileInputs.cache
@@ -194,3 +193,11 @@ D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\bin\Debug\netcoreapp3.1\SEP6_TEST.Stat
 D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\scopedcss\Components\MoviePageComponent.razor.rz.scp.css
 D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\scopedcss\projectbundle\SEP6_TEST.bundle.scp.css
 D:\SEP6\Sep6BlazorApp\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\scopedcss\Components\MovieHolderComponent.razor.rz.scp.css
+D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\bin\Debug\netcoreapp3.1\SEP6_TEST.StaticWebAssets.xml
+D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\MovieHolderComponent.razor.g.cs
+D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\MoviePageComponent.razor.g.cs
+D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\Razor\Components\MovieHolderComponent.razor.g.cs
+D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\Razor\Components\MoviePageComponent.razor.g.cs
+D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\scopedcss\Components\MovieHolderComponent.razor.rz.scp.css
+D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\scopedcss\Components\MoviePageComponent.razor.rz.scp.css
+D:\VIA\6th semester\SEP 6\Testing\SEP6_TEST\SEP6_TEST\obj\Debug\netcoreapp3.1\scopedcss\projectbundle\SEP6_TEST.bundle.scp.css

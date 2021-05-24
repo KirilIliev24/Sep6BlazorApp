@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj": {}
+    "D:\\VIA\\6th semester\\SEP 6\\Testing\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj": {}
   },
   "projects": {
-    "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj": {
+    "D:\\VIA\\6th semester\\SEP 6\\Testing\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj",
+        "projectUniqueName": "D:\\VIA\\6th semester\\SEP 6\\Testing\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj",
         "projectName": "SEP6_TEST",
-        "projectPath": "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj",
-        "packagesPath": "C:\\Users\\mmikl\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP6\\Sep6BlazorApp\\SEP6_TEST\\SEP6_TEST\\obj\\",
+        "projectPath": "D:\\VIA\\6th semester\\SEP 6\\Testing\\SEP6_TEST\\SEP6_TEST\\SEP6_TEST.csproj",
+        "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
+        "outputPath": "D:\\VIA\\6th semester\\SEP 6\\Testing\\SEP6_TEST\\SEP6_TEST\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mmikl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
